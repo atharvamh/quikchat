@@ -5,6 +5,7 @@ import { IFormElementConfig } from "../../../interfaces/IFormElementConfig";
 import QuikInput from "../FormInput/quikInput";
 import loginFormFields from "./fields";
 import "../styles.css"
+import { NavLink } from "react-router-dom";
 
 export default function LoginForm(){
     const [persistSignIn, setPersistSignIn] = useState<boolean>(false);
@@ -19,7 +20,7 @@ export default function LoginForm(){
     return (
         <div className="quik-form-container">
             <form name="login-form" onSubmit={(e) => handleFormSubmission(e)} className="quik-form-vertical">
-                <h2 className="form-header">QuikChat Login</h2>
+                <h2 className="quik-form-header">QuikChat Login</h2>
                 {
                     renderFormFields().map(
                         (formField : {id: string, config : IFormElementConfig}) => {
@@ -44,6 +45,10 @@ export default function LoginForm(){
                     Login
                 </button>
             </form>
+            <div className="quik-form-footer">
+                <p>Not Yet Registered ?</p>
+                <NavLink to="/">Sign Up</NavLink>
+            </div>
         </div>
     )
 }

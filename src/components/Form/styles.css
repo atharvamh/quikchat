@@ -9,9 +9,17 @@
     min-width: 20em;
 }
 
-.form-header{
+.quik-form-header{
     color: #000;
     text-align: center;
+}
+
+.quik-form-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    column-gap: 0.5em;
 }
 
 .label{
